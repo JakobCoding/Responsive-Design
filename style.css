@@ -28,22 +28,21 @@ main {
     background: #d8ebff ;
 }
 
-.feature-1 {
+#feature-1 {
     background: #f5d08e
 }
 
-.feature-2 {
+#feature-2 {
     background: #f19a9c;
 }
 
-.feature-3 {
+#feature-3 {
     background: #cac7fa;
 }
 
 header, section {
     flex: 50vw;
     min-height: 200px;
-    
 }
 
 header, section, nav {
@@ -51,3 +50,46 @@ header, section, nav {
     justify-content: center;
     align-items: center;
 }
+
+
+@media screen and (min-width: 500px) 
+    and (max-width: 899px) {
+    article {
+        flex-flow: row wrap;
+    }
+    nav {
+        flex-basis: 100%;
+        min-height: 50px;
+    } 
+    section {
+        height: 50vw;
+    }  
+}
+
+@media  screen and (min-width: 900px) {
+    article {
+        flex-flow: row wrap;
+    }
+    nav {
+        flex: 100%;
+        min-height: 50px;
+    } 
+    .feature {
+        flex: calc(100vw / 3);
+        min-height: calc(100vw / 3 * 1.25);
+    }
+    #signup {
+        order: 1;
+        min-height: auto;
+        height: 150px;
+    }  
+    header {
+        flex: 100vw;
+        height: 25vw;
+    } 
+    main {
+        order: 2;
+    }
+}
+
+
